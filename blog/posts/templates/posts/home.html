@@ -1,1 +1,13 @@
-<h1>You're home</h1>
+<h1>Welcome to Xinyang's Blog</h1>
+
+<h2>Latest Posts</h2>
+{% for post in posts.all %}
+{{ post.title }}
+<br />
+<img src="{{post.image.url}}">
+{{ post.pub_date_pretty }}
+<br/>
+{{ post.summary }}
+<br />
+<br />
+{% endfor %}
