@@ -2,7 +2,7 @@
 
 <h2>Latest Posts</h2>
 {% for post in posts.all %}
-{{ post.title }}
+<a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
 <br />
 <img src="{{post.image.url}}">
 {{ post.pub_date_pretty }}
